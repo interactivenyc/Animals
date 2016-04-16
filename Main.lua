@@ -4,9 +4,9 @@
 function setup()
     print("Hello World!")
     animalBase = 200
-    cat = Cat(100,animalBase)
-    cat2 = Cat(300,animalBase)
-    dog = Dog(500,animalBase)
+    cat = Cat(100,animalBase,"fluffy")
+    cat2 = Cat(300,animalBase,"kitty")
+    dog = Dog(500,animalBase,"rex")
     button = Button("Feed Animals",120,50)
     button.action = function() feedAnimals() end
     
@@ -33,6 +33,9 @@ end
 
 function feedAnimals()
     log("feedAnimals")
+    cat:feed()
+    cat2:feed()
+    dog:feed()
 end
 
 function log(msg)
